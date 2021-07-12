@@ -1,0 +1,28 @@
+#! /bin/bash
+
+#This Script is Designed to Compress Files in .TAR Format after taking the information from/
+#The User within the terminal. 
+# 7-5-21 
+
+#Variable Declaration
+$Collection
+$FileName
+$CompressedOutPut
+
+
+echo "Testing Prompt: "
+read $Collection
+
+if 
+then
+	echo "Please Enter the Files You Wish To Compress: "
+	read $FileName
+	echo "Please Enter the name for your arcived file: "
+	read $ArchiveName
+	tar -r -u -t $ArchiveName $FileName
+	echo $ArchiveName "Has Been Created"
+	echo "Are You Done Adding to the Archive?"
+	Read $Collection
+else  $Collection = "Yes"
+fi
+
